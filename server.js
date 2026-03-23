@@ -1,3 +1,6 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 const express = require("express");
 const { chromium } = require("playwright");
 const { loginAndGetToken } = require("./login");

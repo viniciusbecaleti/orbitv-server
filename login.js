@@ -3,8 +3,8 @@ const { chromium } = require("playwright");
 async function loginAndGetToken(page) {
   await page.goto("https://painelslim.site");
 
-  await page.fill('input[name="username"]', process.env.LOGIN_SLIM);
-  await page.fill('input[name="password"]', process.env.PASSWORD_SLIM);
+  await page.fill('input[name="username"]', String(process.env.LOGIN_SLIM));
+  await page.fill('input[name="password"]', String(process.env.PASSWORD_SLIM));
 
   await page.click('button[type="submit"]');
 
